@@ -1,0 +1,10 @@
+@media (min-width: $desktop) {
+  .banner{
+   &__title{
+     padding: 0;
+   }
+    &__inner{
+      padding: 40px 0;
+    }
+  }
+}

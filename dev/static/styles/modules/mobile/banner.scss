@@ -1,0 +1,11 @@
+@media (min-width: 320px) {
+  .banner{
+    &__inner{
+      text-align: center;
+      padding: 20px 0;
+    }
+    &__link{
+      margin-top: 20px;
+    }
+  }
+}

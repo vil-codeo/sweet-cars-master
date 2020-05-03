@@ -1,0 +1,187 @@
+@media (min-width: 320px) {
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .prices{
+    &__bg{
+      padding: 20px 0;
+      color: $dark;
+      @include cover-background();
+    }
+    &__title{
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    &__navigation{
+      margin-bottom: 10px;
+      &-list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      &-item{
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 24px;
+        text-decoration-line: underline;
+        display: block;
+        margin-bottom: 10px;
+        width: 49%;
+        height: 100%;
+        cursor: pointer;
+        &:nth-child(odd){
+          border-right: 1px solid $dark;
+          padding-right: 15px;
+          text-align: right;
+          margin-left: auto;
+        }
+        &:nth-child(even){
+          padding-left: 15px;
+        }
+        &.is-active{
+          background-color: $dark;
+          font-size: 18px;
+          line-height: 29px;
+          color: $yellow;
+          padding-right: 10px;
+        }
+      }
+    }
+    &__content{
+      max-width: 726px;
+      position: relative;
+      display: none;
+      animation-name: fadeIn;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+      margin-left: 0;
+      padding-bottom: 190px;
+      z-index: 1;
+      &.is-active { display: block; }
+    }
+    &__body{
+      &-image{
+        width: 100%;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        @include cover-background();
+        height: 257px;
+
+      }
+      &-info{
+        background-color: $white;
+        padding: 20px;
+        border-radius: 20px;
+        position: absolute;
+        max-width: 380px;
+        width: 100%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translateX(-50%);
+        bottom: 0;
+      }
+      &-name{
+        color: $yellow;
+        text-shadow: 5px 5px 10px rgba(252, 208, 37, 0.3);
+        font-size: 28px;
+        line-height: 34px;
+        font-weight: 700;
+        margin-bottom: 5px;
+        display: block;
+      }
+      &-item{
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        &:not(:first-child){
+          margin-top: 15px;
+        }
+        &-text{
+          margin-right: 15px;
+        }
+        &-price{
+          &--underline{
+            position: relative;
+            white-space: nowrap;
+            &::before,&::after{
+              content: '';
+              width: calc(100% + 20px);
+              height: 2px;
+              position: absolute;
+              background-color: #d62d30;
+              top: 50%;
+              transform: translateY(-50%);
+              left: -10px;
+            }
+            &::before{
+              transform: rotate(15deg);
+            }
+            &::after{
+              transform: rotate(-15deg);
+            }
+          }
+          &--color{
+            &-red{
+              font-size: 28px;
+              line-height: 34px;
+              color: $red;
+              font-weight: 500;
+            }
+          }
+          &--wight{
+            &-bold{
+              font-weight: 700;
+              text-shadow: 5px 5px 10px rgba(214, 45, 48, 0.3);
+            }
+          }
+        }
+      }
+      &-desc{
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+    &__footer{
+      background-color: $dark;
+      border-radius: 20px;
+      text-align: center;
+      &-text{
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 34px;
+        color: $yellow;
+        padding: 15px 10px;
+      }
+    }
+  }
+}
+@media (min-width: $mobile) {
+  .prices{
+    &__content{
+      margin-left: 25px;
+    }
+    &__navigation{
+      &-item{
+        font-size: 20px;
+        &.is-active{
+          font-size: 24px;
+        }
+      }
+    }
+    &__body{
+      &-item{
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+  }
+}

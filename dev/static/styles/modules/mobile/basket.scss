@@ -1,0 +1,125 @@
+@media (min-width: 320px) {
+  .basket{
+    &__bg{
+      @include cover-background();
+    }
+    &__inner{
+      display: flex;
+      flex-direction: column;
+      padding: 20px 0;
+      align-items: center;
+    }
+    &__desc{
+      display: block;
+      order: 1;
+      font-size: 20px;
+      line-height: 24px;
+      text-align: center;
+      border: 1px solid $yellow;
+      max-width: 393px;
+      margin-top: 20px;
+      padding: 5px;
+    }
+    &__title{
+      text-align: center;
+      margin-bottom: 20px;
+      &-text{
+        &--color{
+          &-yellow{
+            display: block;
+            color: $yellow;
+          }
+        }
+      }
+    }
+    &__form{
+      background-color: rgba($yellow, .8);
+      border-radius: 20px;
+      padding: 20px;
+      max-width: 488px;
+      width: 100%;
+      &-row{
+        margin-bottom: 20px;
+      }
+      &-label{
+        display: block;
+        margin-bottom: 5px;
+        color: $dark;
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 700;
+      }
+      &-input{
+        display: block;
+        width: 100%;
+        box-shadow: inset 4px 4px 7px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        border: none;
+        background-color: $white;
+        height: 60px;
+        padding: 5px 25px;
+      }
+    }
+    &__select{
+      z-index: 2;
+      &-header{
+        @extend .basket__form-input;
+        color: $black;
+        font-weight: 700;
+        padding-top: 15px;
+        &::before{
+          content: '';
+          position: absolute;
+          background-image: url(../images/common/arrow-up.svg);
+          width: 30px;
+          height: 20px;
+          @include cover-background();
+          right: 20px;
+          top: 50%;
+          transform: translateY(-50%);
+          transition: all linear .3s;
+        }
+      }
+      &-body{
+        background-color: $white;
+        color: $black;
+        font-weight: 700;
+        box-shadow: inset 4px 4px 7px rgba(0, 0, 0, 0.2);
+      }
+      &-item{
+        padding: 10px 25px;
+        border-bottom: 1px solid $dark;
+      }
+      &.is-open{
+        .basket__select-header{
+          border-radius: 0;
+          &::before{
+            transform: rotate(180deg) translateY(20%);
+          }
+        }
+      }
+     &-current{
+       max-width: 195px;
+       display: block;
+       overflow: hidden;
+       white-space: nowrap;
+       text-overflow: ellipsis;
+     }
+    }
+    &__btn{
+      padding: 15px 37px;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+}
+
+@media (min-width: $mobile) {
+  .basket{
+    &__select{
+      &-current{
+        max-width: 300px;
+      }
+    }
+  }
+}

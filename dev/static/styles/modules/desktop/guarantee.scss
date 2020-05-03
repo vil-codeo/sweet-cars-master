@@ -1,0 +1,21 @@
+@media (min-width: $desktop) {
+  .guarantee{
+    &__inner{
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 40px;
+    }
+    &__col{
+      margin-left: 70px;
+      margin-right: 0;
+    }
+    &__content{
+      margin-top: -40px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    &__title{
+      text-align: left;
+    }
+  }
+}

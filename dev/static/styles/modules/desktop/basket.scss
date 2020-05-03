@@ -1,0 +1,28 @@
+@media (min-width: $desktop) {
+  .basket{
+    &__inner{
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    &__title{
+      max-width: 620px;
+      text-align: left;
+    }
+    &__desc{
+      margin-top: 0;
+      transform: translateY(-70px);
+      text-align: left;
+      &.basket__desc--is-open{
+        transform: translateY(0);
+      }
+    }
+    &__btn{
+      font-size: 24px;
+      line-height: 28px;
+      padding: 16px 64px;
+
+    }
+  }
+}

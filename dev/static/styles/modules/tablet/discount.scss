@@ -1,0 +1,65 @@
+@media (min-width: $tablet) {
+  .discount{
+    &__title{
+      span{
+        color: $red;
+      }
+    }
+    &__link{
+      max-width: 640px;
+      display: block;
+      margin: 0 auto 20px;
+      padding: 26.5px;
+    }
+    &__item{
+      height: 295px;
+      border-radius: 0;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+      display: block;
+      &--bg{
+        &-dark{
+          background: linear-gradient(90deg, #2B3547 0%, #2B3547 53.62%, rgba(43, 53, 71, 0) 61.9%);
+        }
+        &-white{
+          background: linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 53.62%, rgba(255, 255, 255, 0) 61.9%);
+        }
+      }
+      &-image{
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        max-width: 445px;
+        width: 100%;
+      }
+      &-reduced{
+        top: 40px;
+        left: 40px;
+        transform: matrix(0.95, -0.29, 0.32, 0.96, 0, 0);
+      }
+      &-price{
+        left: 220px;
+        font-size: 100px;
+        line-height: 122px;
+        top: 50px;
+      }
+      &-number{
+        font-size: 206px;
+        line-height: 251px;
+        top: 10px;
+        z-index: 1;
+      }
+      &-desc{
+        max-width: 580px;
+        width: 100%;
+        position: absolute;
+        left: 20px;
+        z-index: 2;
+        bottom: 15px;
+        font-size: 42px;
+        line-height: 51px;
+
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+section.s-basket
+	.basket__bg(style="background-image: url(static/images/content/basket/basket-bg.jpg);")
+		.container
+			.basket__inner
+				h2.basket__title.section-title(data-aos="fade-up")
+					span.basket__title-text Давайте подберем для Вас лучший автомобиль по сладкой цене.
+					span.basket__title-text.basket__title-text--color-yellow ПРЯМО СЕЙЧАС!
+				span.basket__desc(data-aos="zoom-in") Вы получите бесплатную консультацию, и до 5 вариантов с просчетом стоимости в Украине
+				form.basket__form
+					.basket__form-row
+						label.basket__form-label Ваше имя:
+						input.basket__form-input(required, type="text" data-aos="fade-right")
+					.basket__form-row
+						label.basket__form-label Ваш телефон:
+						input.basket__form-input(required, type="tel" data-aos="fade-left")
+					.basket__form-row
+						label.basket__form-label Интересующее авто:
+						.select.basket__select(data-aos="fade-right")
+							.select__header.basket__select-header
+								span.select__current.basket__select-current Audi A6, 2015 г.в.
+							.select__body.basket__select-body
+								.select__item.basket__select-item MAZDA CX-5
+								.select__item.basket__select-item BMW 328i
+								.select__item.basket__select-item Volkswagen Passat
+					button.basket__btn.btn.btn--bg-gray(data-aos="zoom-in") ОТПРАВИТЬ

@@ -1,0 +1,29 @@
+@media (min-width: $desktop) {
+  .question-answer {
+    &__inner{
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+    &__accordion{
+      max-width: 645px;
+      position: relative;
+      z-index: 1;
+    }
+    &__content{
+      width: 800.45px;
+      margin-top: 30px;
+      height: 100%;
+      margin-right: -120px;
+      &-title{
+        margin-top: 45px;
+      }
+      &-video{
+        max-width: 72%;
+      }
+    }
+    &__title{
+      margin-bottom: 40px;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@media (min-width: $desktop) {
+  .discount{
+    &__title{
+      span{
+        margin-top: 25px;
+      }
+    }
+    &__inner{
+      padding: 50px 0;
+    }
+    &__item{
+      height: 370px;
+      &-image{
+        max-width: 562px;
+      }
+      &-number{
+        font-size: 250px;
+        line-height: 305px;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+      }
+      &-reduced{
+        left: 80px;
+        top: 95px;
+      }
+      &-price{
+        top: 80px;
+        left: 260px;
+      }
+      &-desc{
+        bottom: 40px;
+        left: 55px;
+      }
+    }
+  }
+}

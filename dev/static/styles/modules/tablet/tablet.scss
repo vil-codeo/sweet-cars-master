@@ -1,0 +1,33 @@
+@media (min-width: $tablet) {
+  .btn{
+    &--bg{
+      &-yellow{
+        font-size: 24px;
+        line-height: 28px;
+      }
+    }
+  }
+  .title{
+    &--size{
+      &-big{
+        font-size: 62px;
+        line-height: 76px;
+      }
+    }
+  }
+  .header-subtitle{
+    font-size: 42px;
+    line-height: 51px;
+  }
+  .section-title{
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+@import "header";
+@import "discount";
+@import "basket";
+@import "prices";
+@import "banner";
+@import "guarantee";
+@import "question-answer";

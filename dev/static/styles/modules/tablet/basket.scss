@@ -1,0 +1,10 @@
+@media (min-width: $tablet) {
+  .basket{
+    &__desc{
+      max-width: 645px;
+    }
+    &__title{
+      max-width: 775px;
+    }
+  }
+}

@@ -1,0 +1,88 @@
+@media (min-width: $tablet) {
+  .header{
+    &__bg{
+      padding-top: 40px;
+    }
+    &__top{
+      align-items: start;
+    }
+    &__subtitle{
+      margin-bottom: 30px;
+    }
+    &__phone{
+      font-size: 24px;
+      line-height: 29px;
+      margin-bottom: 15px;
+      &-btn{
+        display: block;
+      }
+    }
+
+    &__logo{
+      width: 330px;
+      margin-left: 25px;
+      &-link{
+        width: 100%;
+        display: flex;
+        align-items: baseline;
+      }
+      &-icon{
+        margin-bottom: 0;
+        margin-right: 15px;
+      }
+      &-text{
+        font-size: 18px;
+        line-height: 21px;
+        &--size{
+          &-big{
+            font-size: 33px;
+            line-height: 39px;
+          }
+        }
+      }
+    }
+    &__inner{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 790px;
+      padding: 0;
+      margin: 0 auto;
+    }
+    &__bottom{
+      margin-top: 10px;
+    }
+    &__video{
+      width: 598px;
+      height: 336.38px;
+    }
+    &__col{
+      width: 330px;
+      flex-direction: column-reverse;
+      margin-bottom: 0;
+      min-height: 185px;
+      &:nth-child(-n + 2){
+        margin-bottom: 30px;
+      }
+      &-icon{
+        margin-right: 0;
+        width: 113px;
+        height: 100px;
+        margin-top: 10px;
+      }
+      &-text{
+        text-align: center;
+        br{
+          display: none;
+        }
+      }
+    }
+  }
+  .btn{
+    &--bg{
+      &-yellow{
+        padding: 14.5px 50px;
+      }
+    }
+  }
+}
